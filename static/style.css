@@ -1,7 +1,28 @@
 html{
-    background: linear-gradient(130deg,rgba(10, 127, 112, 1) 0%, rgba(7, 88, 77, 1) 50%, rgba(4, 48, 42, 1) 100%);
+    background: linear-gradient(130deg,#097566 0%, #09665b 50%, #085b51 100%);
+    padding: 45px 20px 0px 20px;
+    min-height: 100%;
+    font-family:'Lato', sans-serif;
+    font-weight:400;
+    letter-spacing: 0.5px;
+    color: white;
 }
 
 img{
-    width: 250px;
+    width: 140px;
+    margin-bottom: 15px;
+}
+
+.title{
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.151);
+    border-radius: 17px;
 }

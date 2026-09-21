@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="shortcut icon" href="/static/imgs/suap.ifma.edu.br.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title> - Suap: Sistema Unificado de Administração Pública</title>
 </head>
+<script>
+function mostrarSenha() {
+    const senha = document.getElementById("senha");
+    const icone = document.getElementById("icone-senha");
+
+    if (senha.type === "password") {
+        senha.type = "text";
+
+        icone.classList.remove("fa-eye");
+        icone.classList.add("fa-eye-slash");
+
+    } else {
+        senha.type = "password";
+
+        icone.classList.remove("fa-eye-slash");
+        icone.classList.add("fa-eye");
+    }
+}
+</script>
+
 <body>
-    <img src="/static/imgs/logo-IFRO-(horizontal).png" alt="">
-    <p>Um software desenvolvido por uma instituição pública para instituições públicas.</p>
+    <a href="https://suap.ifro.edu.br/"><img src="/static/imgs/logo-IFRO-(horizontal).png" alt=""></a>
+    <div class="content">
+        <p class="title">Login</p>
+        <p>Acesse ao Suap IFRO:</p>
+        <form action="" method="post">
+            <label for="usuario">Usuário:</label><br>
+            <input type="text" name="usuario" id="matricula"><br>
+            <label for="senha">Senha:</label><br>
+            <input type="password" name="senha" id="senha">
+            <button type="button" onclick="mostrarSenha()" class="btn-senha">
+                <i class="fa-solid fa-eye" id="icone-senha"></i>
+            </button>
+        </form>
+    </div>
 </body>
+
 </html>

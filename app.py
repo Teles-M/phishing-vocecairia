@@ -38,7 +38,7 @@ def carregar_usuario(user_id):
     return db.session.get(Usuario, int(user_id))
 
 #==================================#
-#              LOGIN               #
+#              INDEX               #
 #==================================#
 @app.route('/')
 def inicio():
@@ -60,6 +60,13 @@ def login():
         return redirect(url_for('video'))
 
     return render_template('index.html')
+
+#==================================#
+#              VIDEO               #
+#==================================#
+@app.route('/voce/caiu/no/phishing')
+def video():
+    return render_template('video.html')
 
 #==================================#
 #        CRIAÇÃO DO BANCO          #

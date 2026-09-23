@@ -15,40 +15,80 @@
     <title> - Suap: Sistema Unificado de Administração Pública</title>
 </head>
 <script>
-function mostrarSenha() {
-    const senha = document.getElementById("senha");
-    const icone = document.getElementById("icone-senha");
+    function mostrarSenha() {
+        const senha = document.getElementById("senha");
+        const icone = document.getElementById("icone-senha");
 
-    if (senha.type === "password") {
-        senha.type = "text";
+        if (senha.type === "password") {
+            senha.type = "text";
 
-        icone.classList.remove("fa-eye");
-        icone.classList.add("fa-eye-slash");
+            icone.classList.remove("fa-eye");
+            icone.classList.add("fa-eye-slash");
 
-    } else {
-        senha.type = "password";
+        } else {
+            senha.type = "password";
 
-        icone.classList.remove("fa-eye-slash");
-        icone.classList.add("fa-eye");
+            icone.classList.remove("fa-eye-slash");
+            icone.classList.add("fa-eye");
+        }
     }
-}
 </script>
 
 <body>
-    <a href="https://suap.ifro.edu.br/"><img src="/static/imgs/logo-IFRO-(horizontal).png" alt=""></a>
-    <div class="content">
-        <p class="title">Login</p>
-        <p>Acesse ao Suap IFRO:</p>
-        <form action="" method="post">
-            <label for="usuario">Usuário:</label><br>
-            <input type="text" name="usuario" id="matricula"><br>
-            <label for="senha">Senha:</label><br>
-            <input type="password" name="senha" id="senha">
-            <button type="button" onclick="mostrarSenha()" class="btn-senha">
-                <i class="fa-solid fa-eye" id="icone-senha"></i>
-            </button>
-        </form>
-    </div>
+
+    <main class="pagina-login">
+
+        <section class="lado-esquerdo">
+
+            <img class="logo-ifro" src="/static/imgs/logo-IFRO-(horizontal).png" alt="Instituto Federal de Rondônia">
+
+            <p class="descricao">
+                Um software desenvolvido por uma instituição pública para instituições públicas.
+            </p>
+
+        </section>
+
+        <section class="content">
+
+            <p class="title">Login</p>
+            <p>Acesse ao Suap IFRO:</p>
+
+            <form action="" method="post">
+
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" id="usuario">
+
+                <label for="senha">Senha:</label>
+
+                <div class="campo-senha">
+                    <input type="password" name="senha" id="senha">
+
+                    <button type="button" onclick="mostrarSenha()" class="btn-senha">
+                        <i class="fa-solid fa-eye" id="icone-senha"></i>
+                    </button>
+                </div>
+
+                <button type="submit" class="btn-acessar">
+                    Acessar
+                </button>
+
+                <div class="links-login">
+                    <a href="#">Esqueceu ou deseja alterar sua senha?</a>
+                    <a href="#">Esqueceu seu número de matrícula?</a>
+                </div>
+
+                <div class="divisor"></div>
+
+                <button type="button" class="btn-alternativo">
+                    Acesso alternativo
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
 </body>
 
 </html>

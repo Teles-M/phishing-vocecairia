@@ -1,28 +1,482 @@
-html{
-    background: linear-gradient(130deg,#097566 0%, #09665b 50%, #085b51 100%);
-    padding: 45px 20px 0px 20px;
+html {
+    background: linear-gradient(130deg, #0A7E6F 0%, #075C51 50%, #053730 100%);
     min-height: 100%;
-    font-family:'Lato', sans-serif;
-    font-weight:400;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     letter-spacing: 0.5px;
+    box-sizing: border-box;
     color: white;
 }
 
-img{
+img {
     width: 140px;
     margin-bottom: 15px;
 }
 
-.title{
+.title {
     font-size: 40px;
     margin-top: 50px;
     margin-bottom: -10px;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    padding: 0 35px 40px;
+    box-sizing: border-box;
+
     background-color: hsla(0, 0%, 0%, 0.151);
     border-radius: 17px;
+}
+
+form {
+    width: 100%;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 44px;
+
+    padding: 0 12px;
+    margin: 0 0 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+
+    background-color: #fff;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #222;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #10d8c5;
+}
+
+.btn-acessar {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 2px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #10d8c5;
+    color: #102b29;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-acessar:hover {
+    filter: brightness(0.92);
+}
+
+.campo-senha {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha input {
+    padding-right: 45px;
+}
+
+.btn-senha {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 45px;
+    height: 42px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+    color: #555;
+    font-size: 16px;
+}
+
+.btn-acessar {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 2px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #10d8c5;
+    color: #102b29;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-acessar:hover {
+    filter: brightness(0.92);
+}
+body {
+    margin: 0;
+}
+
+.pagina-login {
+    width: 100%;
+    max-width: 1500px;
+    min-height: 700px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    align-items: center;
+    gap: 80px;
+}
+
+.lado-esquerdo {
+    flex: 1;
+}
+
+.logo-ifro {
+    width: 260px;
+}
+
+.descricao {
+    max-width: 500px;
+
+    margin-top: 35px;
+
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.content {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 55px 45px 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(0, 45, 40, 0.55);
+    border-radius: 16px;
+}
+
+.lado-esquerdo {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding-left: 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-left: 2px solid #10d8c5;
+}
+
+.logo-ifro {
+    width: 260px;
+    height: auto;
+    margin: 0;
+}
+
+.descricao {
+    max-width: 520px;
+    margin: 35px 0 0;
+
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.links-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+
+    margin-top: 14px;
+}
+
+.links-login a {
+    color: #10d8c5;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+}
+
+.links-login a:hover {
+    text-decoration: underline;
+}
+
+.divisor {
+    width: 100%;
+    height: 1px;
+
+    margin: 30px 0;
+
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn-alternativo {
+    display: block;
+    margin: 0 auto;
+
+    padding: 10px 22px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: white;
+    color: #174b73;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+
+    html {
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 45px 25px;
+        box-sizing: border-box;
+    }
+
+    .pagina-login {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* No celular, esconde o conteúdo extra do lado esquerdo */
+    .lado-esquerdo {
+        width: 100%;
+    }
+
+    .lado-esquerdo .descricao {
+        display: none;
+    }
+
+    .logo-ifro {
+        width: 150px;
+        margin: 15px 0 30px;
+    }
+
+    /* Card do login */
+    .content {
+    width: 100%;
+    max-width: 530px;
+    min-height: 590px;
+
+    padding: 75px 55px 60px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(0, 45, 40, 0.55);
+    border-radius: 16px;
+}
+
+.title {
+    font-size: 42px;
+    margin: 0 0 8px;
+    font-weight: 400;
+}
+
+.content > p:not(.title) {
+    font-size: 16px;
+    margin: 0 0 45px;
+}
+
+    .title {
+        font-size: 42px;
+        margin: 0 0 10px;
+    }
+
+    .content>p:not(.title) {
+        margin-top: 0;
+        margin-bottom: 45px;
+        font-size: 17px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .campo-senha {
+        width: 100%;
+    }
+
+    .btn-senha {
+        height: 48px;
+    }
+
+    .btn-acessar {
+        width: 100%;
+        height: 48px;
+
+        margin-top: 10px;
+
+        border-radius: 25px;
+        font-size: 17px;
+    }
+
+    .lado-esquerdo {
+        padding: 0;
+        border-left: none;
+    }
+
+    .lado-esquerdo .descricao {
+        display: none;
+    }
+
+    .logo-ifro {
+        width: 150px;
+        margin: 15px 0 30px;
+    }
+
+        html {
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 35px 22px;
+        box-sizing: border-box;
+    }
+
+    .pagina-login {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 760px;
+
+    margin: 0 auto;
+    padding-top: 55px;
+
+    display: grid;
+    grid-template-columns: 1.6fr 0.9fr;
+    align-items: start;
+    gap: 100px;
+
+    box-sizing: border-box;
+}
+
+    .lado-esquerdo {
+    width: 100%;
+    min-height: 650px;
+
+    padding: 20px 0 0 45px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-left: 2px solid #10d8c5;
+}
+
+    .descricao {
+    max-width: 550px;
+    margin: 35px 0 0;
+
+    font-size: 24px;
+    line-height: 1.45;
+}
+
+    .logo-ifro {
+    width: 300px;
+    height: auto;
+    margin: 0;
+}
+
+    .content {
+        width: 100%;
+        max-width: none;
+
+        padding: 45px 35px 55px;
+
+        border-radius: 16px;
+    }
+
+    .title {
+        margin: 0 0 10px;
+
+        font-size: 42px;
+        font-weight: 400;
+    }
+
+    .content > p:not(.title) {
+        margin: 0 0 42px;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    input {
+        height: 48px;
+    }
+
+    .btn-senha {
+        height: 48px;
+    }
+
+    .btn-acessar {
+        height: 48px;
+        border-radius: 25px;
+    }
+
+    .links-login {
+        gap: 22px;
+        margin-top: 16px;
+    }
+
+    .divisor {
+        margin: 30px 0;
+    }
 }
